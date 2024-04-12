@@ -73,7 +73,7 @@ public class CinderscapesClient implements ClientModInitializer {
                 CinderscapesBlocks.POTTED_POLYPITE_SULFUR_QUARTZ
         );
 
-        ItemTooltipCallback.EVENT.register((stack, context, lines) -> {
+        ItemTooltipCallback.EVENT.register((stack, context, type, lines) -> {
             if (stack.isOf(CinderscapesBlocks.NODZOL.asItem())) {
                 lines.add(Text.translatable("block.cinderscapes.nodzol.description").setStyle(Style.EMPTY.withColor(Formatting.GRAY)));
             }
