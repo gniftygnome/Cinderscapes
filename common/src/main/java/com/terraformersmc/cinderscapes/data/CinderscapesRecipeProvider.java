@@ -84,7 +84,22 @@ public class CinderscapesRecipeProvider extends FabricRecipeProvider {
 				.criterion("has_sulfurs", InventoryChangedCriterion.Conditions.items(getItemTagPredicate(CinderscapesItemTags.SULFURS)))
 				.offerTo(exporter);
 
-		offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, CinderscapesItems.SULFUR, RecipeCategory.BUILDING_BLOCKS, CinderscapesBlocks.SULFUR_BLOCK);
+		offerReversibleCompactingRecipes(exporter,
+				RecipeCategory.MISC, CinderscapesItems.SULFUR,
+				RecipeCategory.BUILDING_BLOCKS,
+				CinderscapesBlocks.SULFUR_BLOCK);
+
+		offerBlasting(exporter,
+				List.of(CinderscapesItems.SULFUR_ORE),
+				RecipeCategory.MISC,
+				CinderscapesItems.SULFUR,
+				0.1f, 100, "blasting");
+
+		offerSmelting(exporter,
+				List.of(CinderscapesItems.SULFUR_ORE),
+				RecipeCategory.MISC,
+				CinderscapesItems.SULFUR,
+				0.1f, 200, "smelting");
 
 
 		// quartz recipes
