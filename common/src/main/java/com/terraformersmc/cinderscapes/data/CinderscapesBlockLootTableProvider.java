@@ -29,18 +29,13 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
 
 public class CinderscapesBlockLootTableProvider extends FabricBlockLootTableProvider {
-	private final CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture;
-
 	protected CinderscapesBlockLootTableProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
 		super(output, registriesFuture);
-
-		this.registriesFuture = registriesFuture;
 	}
 
 	@Override
 	public void generate() {
-		RegistryWrapper.Impl<Enchantment> enchantmentRegistry = registriesFuture.getNow(null)
-				.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+		RegistryWrapper.Impl<Enchantment> enchantmentRegistry = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
 
 		// simple blocks
 		addDrop(CinderscapesBlocks.ASH_BLOCK);
