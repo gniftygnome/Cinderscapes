@@ -12,6 +12,7 @@
     ]
   },
   "mixins": [
+    "mixins.cinderscapes-client.json"
   ],
   "custom": {
     "modmenu": {

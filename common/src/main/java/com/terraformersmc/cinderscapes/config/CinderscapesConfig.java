@@ -19,6 +19,8 @@ public final class CinderscapesConfig implements ConfigData {
 
     public boolean easterEggs = false;
 
+    public boolean limitAshParticles = false;
+
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(max = 15)
     public int polypiteLuminance = 4;

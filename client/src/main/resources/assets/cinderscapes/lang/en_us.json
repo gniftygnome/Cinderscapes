@@ -127,6 +127,8 @@
   "text.autoconfig.cinderscapes.title": "Cinderscapes Config",
   "text.autoconfig.cinderscapes.option.easterEggs": "Enable Easter Eggs",
   "text.autoconfig.cinderscapes.option.enableAshFall": "Enable Ash Fall",
+  "text.autoconfig.cinderscapes.option.limitAshParticles": "(Client) Limit ash particles",
+  "text.autoconfig.cinderscapes.option.limitAshParticles.@Tooltip": "Ash particle rate limit roughly that of Basalt Delta",
   "text.autoconfig.cinderscapes.option.polypiteLuminance": "Polypite Quartz Brightness",
   "text.autoconfig.cinderscapes.option.polypiteLuminance.@Tooltip": "Only affects newly generated chunks (lighting cache)",
   "text.autoconfig.cinderscapes.option.biomes": "Modify Biome Generation",
